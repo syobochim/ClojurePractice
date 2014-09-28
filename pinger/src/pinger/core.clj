@@ -1,6 +1,7 @@
 (ns pinger.core
   (:import (java.net URL HttpURLConnection))
   (:require [pinger.scheduler :as scheduler]
+            [pinger.config :as config]
             [clojure.tools.logging :as logger])
   (:gen-class))
 
@@ -20,14 +21,11 @@
     (logger/error (str address "is not available"))))
 
 (defn check []
-  (let [addresses '("https://github.com/syobochim"
-                    "https://twitter.com/syobochim"
-                    "http://google.com/badurl")]
-    (doseq [address addresses]
-      (record-availability address))))
+  (let [address (config/urls (config/config))]
+      (record-availability address)))
 
 (def immediately 0)
-(def every-minute (* 60 1000))
+(def every-minute (* 6 1000))
 
 (defn start [e]
   "REPL helper. Start pinger on executor e."

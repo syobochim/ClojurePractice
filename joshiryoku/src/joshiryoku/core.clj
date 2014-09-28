@@ -28,3 +28,11 @@
 (defn =v=*
   []
   (+ 2 3))
+
+(defn gakuburu
+  [buruburu]
+  (loop [n buruburu
+         result '(；ﾟДﾟ)]
+    (if (= n 0)
+      result
+      (recur (dec n) (list result)))))

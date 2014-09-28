@@ -21,8 +21,8 @@
     (logger/error (str address "is not available"))))
 
 (defn check []
-  (let [address (config/urls (config/config))]
-      (record-availability address)))
+  (doseq [address (config/urls config/config)]
+    (record-availability address)))
 
 (def immediately 0)
 (def every-minute (* 6 1000))

@@ -1,6 +1,30 @@
 (ns joshiryoku.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn  -言-
+  []
+  (+ 2 3))
+
+(defn  ；ﾞﾟ'ωﾟ'
+  []
+  (+ 2 3))
+
+
+(defn  ◞‸◟
+  []
+  (+ 2 3))
+
+(defn  ˄·͈༝·͈˄
+  []
+  (+ 2 3))
+
+(defn ꒪⌓꒪
+  []
+  (+ 2 3))
+
+(defn ◔⊖◔
+  []
+  (+ 2 3))
+
+(defn =v=*
+  []
+  (+ 2 3))
